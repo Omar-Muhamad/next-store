@@ -4,8 +4,9 @@ import type { Metadata } from "next";
 import { Inter, Urbanist } from "next/font/google";
 
 import favicon from "@/assets/icons/favicon.ico";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
+import cn from "@/lib/utils";
 
 export const inter = Inter({ subsets: ["latin"] });
 
@@ -29,9 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${urbanist.className} tracking-wide font-medium`}>
-        <Navbar />
-        {children}
+      <body className={cn("tracking-wide font-medium", urbanist.className)}>
+        <header>
+          <Navbar />
+        </header>
+        <main className="px-10">{children}</main>
       </body>
     </html>
   );
