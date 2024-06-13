@@ -31,6 +31,11 @@ const navLinks: NavLink[] = [
     path: "/shop",
     navMenu: [
       {
+        title: "Shop",
+        path: "/shop",
+        description: "Shop throw all our products",
+      },
+      {
         title: "Men's Fashion",
         path: "/categories/men's clothing",
         description: "See latest trends in men's fashion",

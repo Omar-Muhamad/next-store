@@ -34,7 +34,7 @@ export default function RootLayout({
         <header>
           <Navbar />
         </header>
-        <main className="px-10">{children}</main>
+        <main className="p-5">{children}</main>
       </body>
     </html>
   );

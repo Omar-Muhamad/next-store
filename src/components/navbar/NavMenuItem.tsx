@@ -15,20 +15,18 @@ import ListItem from "./ListItem";
 import { NavMenuHeaderContent, NavMenuItems } from "@/Constants";
 
 interface NavMenuItemProps {
-  key: number;
   title: string;
   navMenu?: NavMenuItems;
   headerContent: false | NavMenuHeaderContent;
 }
 
 const NavMenuItem: FC<NavMenuItemProps> = ({
-  key,
   title,
   navMenu,
   headerContent,
 }) => {
   return (
-    <NavigationMenuItem key={key} className="hover:bg-lightGray">
+    <NavigationMenuItem className="hover:bg-lightGray rounded-sm">
       <NavigationMenuTrigger>{title}</NavigationMenuTrigger>
 
       {headerContent ? (

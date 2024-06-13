@@ -26,8 +26,8 @@ const Navbar = () => {
           {navLinks.map((link, index) =>
             link.navMenu && link.navMenu.length > 0 ? (
               <NavMenuItem
-                title={link.title}
                 key={index}
+                title={link.title}
                 navMenu={link.navMenu}
                 headerContent={link.headerContent}
               />

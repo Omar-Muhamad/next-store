@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 
 import type { Metadata } from "next";
 
+import BreadCrumbs from "@/components/BreadCrumbs";
+
 export const metadata: Metadata = {
   title: "All Products",
   description: "See all products of Fashion shop.",
@@ -12,5 +14,10 @@ export default function ShopLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  return <>{children}</>;
+  return (
+    <div className="px-20">
+      <BreadCrumbs />
+      {children}
+    </div>
+  );
 }
