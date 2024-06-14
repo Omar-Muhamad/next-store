@@ -6,6 +6,7 @@ import { Inter, Urbanist } from "next/font/google";
 import favicon from "@/assets/icons/favicon.ico";
 import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
+import Footer from "@/components/ui/Footer";
 import cn from "@/lib/utils";
 
 export const inter = Inter({ subsets: ["latin"] });
@@ -30,11 +31,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("tracking-wide font-medium", urbanist.className)}>
+      <body
+        className={cn(
+          "grid grid-rows-[auto_1fr_auto] tracking-wide font-medium min-h-screen",
+          urbanist.className,
+        )}
+      >
         <header>
           <Navbar />
         </header>
         <main className="p-5">{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -16,7 +16,7 @@ const AllProducts = async () => {
   const products = await axios.get("/products");
   return (
     <section className="all-products">
-      <ul>
+      <ul className="grid grid-cols-3 gap-5">
         {products.data.map((product: Product) => (
           <ProductCard product={product} key={product.id} />
         ))}

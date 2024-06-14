@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 
 import type { Metadata } from "next";
 
+import SideFilters from "./_components/SideFilters";
+
 import BreadCrumbs from "@/components/BreadCrumbs";
 
 export const metadata: Metadata = {
@@ -17,7 +19,10 @@ export default function ShopLayout({
   return (
     <div className="px-20">
       <BreadCrumbs />
-      {children}
+      <div className="mt-8 grid grid-cols-[1fr_4fr]">
+        <SideFilters />
+        {children}
+      </div>
     </div>
   );
 }
