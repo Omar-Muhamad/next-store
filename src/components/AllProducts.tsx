@@ -2,6 +2,8 @@ import ProductCard from "./ProductCard";
 
 import axios from "@/lib/axios";
 
+export const revalidate = 300;
+
 type Product = {
   id: number;
   title: string;

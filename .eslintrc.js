@@ -13,16 +13,15 @@ module.exports = {
 
     "prettier/prettier": "error",
 
-    "import/exports-last": "error",
+    // "import/exports-last": "error",
     "import/newline-after-import": "error",
     "import/prefer-default-export": ["error", { target: "any" }],
     "import/order": [
       "error",
       {
         "newlines-between": "always",
-        alphabetize: { order: "asc", caseInsensitive: true },
+        // alphabetize: { order: "asc", caseInsensitive: true },
         pathGroups: [{ pattern: "react", group: "builtin" }],
-        pathGroupsExcludedImportTypes: [],
       },
     ],
   },

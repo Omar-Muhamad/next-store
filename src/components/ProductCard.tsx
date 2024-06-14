@@ -1,5 +1,4 @@
 import { FC } from "react";
-
 import Link from "next/link";
 
 import { Product } from "./AllProducts";
@@ -11,7 +10,7 @@ type ProductCardProps = {
 const ProductCard: FC<ProductCardProps> = ({ product }) => {
   return (
     <li>
-      <Link href={`/products/${product.id}`} className="flex flex-col pb-4">
+      <Link href={`/shop/${product.title}`} className="flex flex-col pb-4">
         <div className="h-80 w-full py-8 px-4 bg-lightGray flex items-center justify-center">
           <img
             src={product.image}
