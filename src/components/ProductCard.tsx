@@ -11,18 +11,18 @@ type ProductCardProps = {
 const ProductCard: FC<ProductCardProps> = ({ product }) => {
   return (
     <li>
-      <Link href={`/products/${product.id}`}>
-        <div className="w-20">
+      <Link href={`/products/${product.id}`} className="flex flex-col pb-4">
+        <div className="h-80 w-full py-8 px-4 bg-lightGray flex items-center justify-center">
           <img
             src={product.image}
             alt={product.title}
-            className="h-full w-full"
+            className="h-full w-fit"
           />
         </div>
 
-        <h2>{product.title}</h2>
-        <p>{product.description}</p>
-        <p>{product.price}</p>
+        <h2 className="mt-5 font-bold truncate">Adidas</h2>
+        <p className="truncate">{product.title}</p>
+        <p className="text-lg">{product.price} $</p>
       </Link>
     </li>
   );
